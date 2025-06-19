@@ -16,7 +16,7 @@ export default function Login() {
     const {signup, login} = useAuth()
 
     async function handleAuthenticate() {
-        if (!email || !email.includes('@') || password.length < 6 || authenticating) {return }
+        if (!email || !email.includes('@') || password.length < 3 || authenticating) {return }
         setError(null)
         setAuthenticating(true)
         try {
